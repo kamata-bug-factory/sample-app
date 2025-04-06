@@ -8,7 +8,7 @@ const todoItems = [
 ];
 
 describe('Test filterTodoItems', () => {
-  test('filter todo items by the keyword', () => {
+  test('filter todo items by a keyword', () => {
     const result = todoUtil.filterTodoItems(todoItems, 'メモリーズ', true);
     expect(result).toEqual([
       { id: 1, text: 'メモリーズ', done: false },
@@ -25,7 +25,7 @@ describe('Test filterTodoItems', () => {
     ]);
   });
 
-  test('return an empty array when no item including the keyword exists', () => {
+  test('return an empty array when no item including a keyword exists', () => {
     const result = todoUtil.filterTodoItems(todoItems, '夜に駆ける', true);
     expect(result).toEqual([]);
   });
